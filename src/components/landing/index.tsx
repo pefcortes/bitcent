@@ -8,6 +8,7 @@ import Pagina from "../template/Pagina"
 export default function Landing() {
     return (
         <Pagina externa>
+            ta errado!!!
             <Cabecalho/>
             <Destaque/>
             <Vantagens/>

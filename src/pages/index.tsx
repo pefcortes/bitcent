@@ -1,5 +1,14 @@
 import Landing from "@/components/landing";
+import Financas from "@/components/financas";
+import { useContext } from "react";
+import AutenticacaoContext from "@/data/contexts/AutenticacaoContext";
+import Carregando from "../components/template/carregando";
+
 
 export default function Home() {
-  return <Landing/>
+  const {usuario, carregando} = useContext(AutenticacaoContext)
+  
+  if(carregando) return <Carregando/>
+  return usuario ? <Financas/> : <Landing/>
+  
 }

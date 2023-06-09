@@ -1,9 +1,9 @@
-/*import AutenticacaoContext from '@/data/contexts/AutenticacaoContext'*/
+import AutenticacaoContext from '@/data/contexts/AutenticacaoContext'
 import { IconArrowRight, IconVideo } from '@tabler/icons-react'
 import { useContext } from 'react'
 
 export default function Slogan() {
-    /*const { loginGoogle } = useContext(AutenticacaoContext)*/
+   const { loginGoogle } = useContext(AutenticacaoContext)
     
     function renderizarFrase() {
         return (
@@ -55,7 +55,8 @@ export default function Slogan() {
                 Plataforma financeira que simplifica sua vida!
             </div>
             <div className="flex justify-center sm:justify-start items-center gap-2">
-                <div className={`
+                <div onClick={loginGoogle}
+                    className={`
                         flex items-center gap-2 cursor-pointer
                         bg-gradient-to-r from-indigo-600 to-cyan-600
                         text-white px-5 py-2.5 rounded-md
